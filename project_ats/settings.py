@@ -78,13 +78,15 @@ WSGI_APPLICATION = 'project_ats.wsgi.application'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 
+
 DATABASES = {
     'default': dj_database_url.config(
-        default='sqlite:///db.sqlite3',
+        default=os.environ.get('DATABASE_URL'),  # Explicitly pull from env
         conn_max_age=600,
-        ssl_require=True  # Optional but recommended for Render
+        ssl_require=True
     )
 }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
