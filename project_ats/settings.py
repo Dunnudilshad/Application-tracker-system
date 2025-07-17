@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-1lu-6ya(=d+qgyy*q9f-v&%ckaj&wcdszr6-s7#_*q0oj^nhnu'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'application-tracker-system.onrender.com']
 
@@ -77,11 +77,8 @@ WSGI_APPLICATION = 'project_ats.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME':'ats_db',
-        'HOST':'localhost',
-        'USER':'root',
-        'PASSWORD':'Safiya123@'       
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / "db.sqlite3"      
             }
 }
 
