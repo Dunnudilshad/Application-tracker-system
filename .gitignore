@@ -1,26 +1,41 @@
-# Python
+# Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
+*.pyo
+*.pyd
+*.pyc
 
-# Virtual Environment
+# Virtual environment folders
 env/
 venv/
+shoesenv/
 
-# Django
+# Django-related
 *.log
 *.pot
-*.pyc
-*.pyo
-*.db
-db.sqlite3
+*.mo
 
-# Static & media
-/staticfiles/
-/media/
+# SQLite database
+# (We want to keep this for deployment on Render)
+# db.sqlite3   <-- DO NOT ignore this
 
-# Environment variables
+# Static and media files (collected by collectstatic or uploaded)
+staticfiles/
+media/
+
+# dotenv environment variables
 .env
+.env.*
 
-# VSCode & IDEs
+# VSCode & PyCharm project settings
 .vscode/
 .idea/
+
+# Node and frontend assets (if using)
+node_modules/
+build/
+dist/
+
+# Mac/Linux/Windows system files
+.DS_Store
+Thumbs.db
